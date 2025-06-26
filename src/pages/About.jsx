@@ -1,7 +1,6 @@
 import React from 'react';
 import Loader from '../components/Loader/Loader';
 import Alert from '../components/Alert/Alert';
-import Navbar from '../components/Navbar/Navbar';
 import Tabs from '../components/Tabs/Tabs';
 
 function About() {
@@ -12,7 +11,6 @@ function About() {
 
   return (
     <div>
-      <Navbar />
       <div className="p-6">
         <h1 className="text-2xl font-bold mb-4">About Page</h1>
         <Alert type="success" message="This is a success message." />
