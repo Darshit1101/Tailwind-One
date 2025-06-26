@@ -11,16 +11,21 @@ function About() {
     { label: 'Tab 2', content: <p>This is tab 2</p> }
   ];
 
-    const { user, setUser } = useContext(UserContext);
-//   const { state, dispatch } = useContext(UserContext);
+  // const { user, setUser } = useContext(UserContext);
+  const { state, dispatch } = useContext(UserContext);
 
   return (
     <div>
       <div className="p-6">
-        <h1 className="text-2xl font-bold mb-4">About Page {user}</h1>
-        <Button onClick={() => setUser('Darshit')} text="Change Name" />
-        {/* <h1>Hello, {state.user}!</h1>
-        <button onClick={() => dispatch({ type: 'SET_USER', payload: 'DKBOY' })}>Change Name</button> */}
+        {/* <h1 className="text-2xl font-bold mb-4">About Page {user}</h1>
+        <Button onClick={() => setUser('Darshit')} text="Change Name" /> */}
+
+        <h1>Hello, {state.user}!</h1>
+        <Button
+          onClick={() => dispatch({ type: 'SET_USER', payload: 'DKBOY' })}
+          text="Change Name"
+        />
+
         <Alert type="success" message="This is a success message." />
         <div className="my-6">
           <Tabs tabs={tabData} />

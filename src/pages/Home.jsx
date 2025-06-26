@@ -8,16 +8,16 @@ import { UserContext } from '../context/UserContext';
 function Home() {
   const [name, setName] = useState('');
   const [showModal, setShowModal] = useState(false);
-  const { user, setUser } = useContext(UserContext);
-  // const { state, dispatch } = useContext(UserContext);
+  // const { user, setUser } = useContext(UserContext);
+  const { state, dispatch } = useContext(UserContext);
 
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Home Page {user}</h1>
-      <Button onClick={() => setUser('Darshit')} text="Change Name" />
+      {/* <h1 className="text-2xl font-bold mb-4">Home Page {user}</h1>
+      <Button onClick={() => setUser('Darshit')} text="Change Name" /> */}
 
-      {/* <h1>Hello, {state.user}!</h1>
-      <button onClick={() => dispatch({ type: 'SET_USER', payload: 'DKBOY' })}>Change Name</button> */}
+      <h1>Hello, {state.user}!</h1>
+      <Button onClick={() => dispatch({ type: 'SET_USER', payload: 'DKBOY' })} text="Change Name" />
 
       <Input
         label="Your Name"
