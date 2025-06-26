@@ -1,16 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Input from '../components/Input/Input';
 import Card from '../components/Card/Card';
 import Modal from '../components/Modal/Modal';
 import Button from '../components/Button/Button';
+import { UserContext } from '../context/UserContext';
 
 function Home() {
   const [name, setName] = useState('');
   const [showModal, setShowModal] = useState(false);
+  const { user, setUser } = useContext(UserContext);
+  // const { state, dispatch } = useContext(UserContext);
 
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Home Page</h1>
+      <h1 className="text-2xl font-bold mb-4">Home Page {user}</h1>
+      <Button onClick={() => setUser('Darshit')} text="Change Name" />
+
+      {/* <h1>Hello, {state.user}!</h1>
+      <button onClick={() => dispatch({ type: 'SET_USER', payload: 'DKBOY' })}>Change Name</button> */}
 
       <Input
         label="Your Name"
