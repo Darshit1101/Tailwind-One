@@ -17,7 +17,12 @@ function Home() {
       <Button onClick={() => setUser('Darshit')} text="Change Name" /> */}
 
       <h1>Hello, {state.user}!</h1>
-      <Button onClick={() => dispatch({ type: 'SET_USER', payload: 'DKBOY' })} text="Change Name" />
+      <div className="mb-4">
+        <Button
+          onClick={() => dispatch({ type: 'SET_USER', payload: 'DKBOY' })}
+          text="Change Name"
+        />
+      </div>
 
       <Input
         label="Your Name"

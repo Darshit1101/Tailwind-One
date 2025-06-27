@@ -21,10 +21,12 @@ function About() {
         <Button onClick={() => setUser('Darshit')} text="Change Name" /> */}
 
         <h1>Hello, {state.user}!</h1>
-        <Button
-          onClick={() => dispatch({ type: 'SET_USER', payload: 'DKBOY' })}
-          text="Change Name"
-        />
+        <div className="mb-4">
+          <Button
+            onClick={() => dispatch({ type: 'SET_USER', payload: 'DKBOY' })}
+            text="Change Name"
+          />
+        </div>
 
         <Alert type="success" message="This is a success message." />
         <div className="my-6">
